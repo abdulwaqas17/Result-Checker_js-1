@@ -1,20 +1,22 @@
 // -------- Result Checker ---------
 
-// var english = +prompt('Enter Your English Obtain Numbers out of 100');
-// var mathematics = +prompt('Enter Your Mathematics Obtain Numbers out of 100');
-// var physics = +prompt ('Enter Your Physics Obtain Numbers out of 100');
-// var urdu = +prompt ('Enter Your Urdu Obtain Numbers out of 100');
-// var chemistry = +prompt ('Enter Your Chemistry Obtain Numbers out of 100');
+var fullName = prompt('Enter your Full Name');
+var rollNumber = prompt('Enter your Roll Number')
+var english = +prompt('Enter Your English Obtain Numbers out of 100');
+var mathematics = +prompt('Enter Your Mathematics Obtain Numbers out of 100');
+var physics = +prompt ('Enter Your Physics Obtain Numbers out of 100');
+var urdu = +prompt ('Enter Your Urdu Obtain Numbers out of 100');
+var chemistry = +prompt ('Enter Your Chemistry Obtain Numbers out of 100');
 
-let english = +prompt('Enter Your English Obtain Numbers out of 100');
-let mathematics = +prompt('Enter Your Mathematics Obtain Numbers out of 100');
-let physics = +prompt ('Enter Your Physics Obtain Numbers out of 100');
-let urdu = +prompt ('Enter Your Urdu Obtain Numbers out of 100');
-let chemistry = +prompt ('Enter Your Chemistry Obtain Numbers out of 100');
+// let english = +prompt('Enter Your English Obtain Numbers out of 100');
+// let mathematics = +prompt('Enter Your Mathematics Obtain Numbers out of 100');
+// let physics = +prompt ('Enter Your Physics Obtain Numbers out of 100');
+// let urdu = +prompt ('Enter Your Urdu Obtain Numbers out of 100');
+// let chemistry = +prompt ('Enter Your Chemistry Obtain Numbers out of 100');
 
 
 // var hundered = 100;
-// var totalNumbers = 500;
+
 
 // alert(english + mathematics + physics + urdu + chemistry);
 // var obtainedNumbers = alert(english + mathematics + physics + urdu + chemistry);
@@ -28,11 +30,12 @@ let chemistry = +prompt ('Enter Your Chemistry Obtain Numbers out of 100');
 // urdu = 100;
 // chemistry = 100;
 
+var totalNumbers = 500;
 var obtainedNumbers = english + mathematics + physics + urdu + chemistry;
 // var obtainedNumbers = 450;
 // console.log(obtainedNumbers);
 
-var percentage = (obtainedNumbers*100)/500;
+var percentage = (obtainedNumbers*100)/totalNumbers;
 
 // alert(obtainedNumbers);
 
@@ -60,14 +63,23 @@ if (percentage <= 100 && percentage >= 90) {
 
      Grade = ('D');
 
-}  else{
+}  else if (percentage < 50){
 
-    var Grade = ('Fail');
+     Grade = ('Fail');
+
+} else {
+
+     Grade = ('Your Grade is Not Found, Write Correct Numbers')
 
 }
 
 // alert(Grade)
-alert('Your Result is Here: \nObtained Numbers = '+ obtainedNumbers +'\nPercentage = '+ percentage +'\nGrade = '+ Grade);
+alert('Your Result is Here: \nName ='+ fullName
+  +'\nRoll Number ='+ rollNumber
+  +'\nTotal Marks ='+ totalNumbers
+  +'\nObtained Marks = '+ obtainedNumbers
+  +'\nPercentage = '+ percentage
+  +'\nGrade = '+ Grade);
 // console.log('Your Result is Here: Obtained Numbers =',obtainedNumbers,'| Percentage =',percentage,'| Grade =',Grade);
 
 
